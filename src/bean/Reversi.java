@@ -1,4 +1,10 @@
 package bean;
+import constant.FileGetter;
+
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Reversi {
@@ -13,12 +19,13 @@ public class Reversi {
         checker.addChess(new Chess(true, (char)('a' + dimen / 2), (char)('a' + dimen / 2)));
         checker.print();
         boolean isOver = false;
-        while(!isOver){
-            if(!computer) {
-                compuMov(checker);
-
-            }
-        }
+        writeBlog();
+//        while(!isOver){
+//            if(!computer) {
+//                compuMov(checker);
+//
+//            }
+//        }
     }
     public static void initialize() {
         Scanner input = new Scanner(System.in);
@@ -66,5 +73,17 @@ public class Reversi {
     }
     public static void hasValidMove() {
 
+    }
+    public static void writeBlog() {
+        FileGetter fileGetter = new FileGetter();
+        File blogFile = fileGetter.readFileFromClassPath();
+        try {
+            BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(blogFile, true));
+            bufferedWriter.write("日期" + "," + "玩家");
+            bufferedWriter.newLine();
+            bufferedWriter.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
