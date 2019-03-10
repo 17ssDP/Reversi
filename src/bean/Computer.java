@@ -23,7 +23,8 @@ public class Computer extends Player{
             }
         }
         if(maxScore > 0) {
-            super.move(row, col, checker);
+            Chess chess = new Chess(this.getColor(), (char)(row + 'a'), (char)(col + 'a'));
+            checker.getChessboard()[row][col] = chess;
             return new int[]{row, col};
         }else {
             return null;
