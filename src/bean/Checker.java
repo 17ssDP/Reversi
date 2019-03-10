@@ -15,30 +15,31 @@ public class Checker {
     public void addChess(Chess chess) {
         chessboard[chess.getRow() - 'a'][chess.getCol() - 'a'] = chess;
     }
-    public int computScore(int row, int col, boolean computer) {
+    public int computeScore(int row, int col, boolean color) {
         int score = 0;
         for(int i = 1; i >= -1; i--) {
             for(int j = 1; j >= -1; j--) {
-                if(getChess(row - i, col - j) != null && !chessboard[row - i][col - j].getColor() == computer) {
-                    if(getChess(row - 2 * i, col - 2 * j) != null && chessboard[row - 2 * i][col - 2 * j].getColor() == computer)
+                if(getChess(row - i, col - j) != null && !chessboard[row - i][col - j].getColor() == color) {
+                    if(getChess(row - 2 * i, col - 2 * j) != null && chessboard[row - 2 * i][col - 2 * j].getColor() == color)
                         score++;
                 }
             }
         }
         return score;
     }
-    public boolean changeColor(int row, int col, boolean color) {
+    public int changeColor(int row, int col, boolean color) {
+        int num = 0;
         for(int i = 1; i >= -1; i--) {
             for(int j = 1; j >= -1; j--) {
                 if(getChess(row - i, col - j) != null && !chessboard[row - i][col - j].getColor() == color) {
                     if(getChess(row - 2 * i, col - 2 * j) != null && chessboard[row - 2 * i][col - 2 * j].getColor() == color) {
                         chessboard[row - i][col - j].setColor(color);
-                        return true;
+                        num++;
                     }
                 }
             }
         }
-        return false;
+        return num;
     }
     public boolean inRange(int row, int col) {
         return row >= 0 && row < size && col >= 0 && col < size;
@@ -68,7 +69,9 @@ public class Checker {
             }
         }
     }
-
+    public boolean checkHumanMove(int row, int col, boolean color) {
+        return (this.getChessboard()[row][col] == null) && this.computeScore(row, col, color) > 0;
+    }
     public int getSize() {
         return size;
     }
