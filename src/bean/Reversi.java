@@ -5,45 +5,44 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Scanner;
 
 public class Reversi {
     private static int dimen;
     private static Human human;
     private static Computer computer;
+    private static Player[] players;
     private static boolean isOver = false;
+    private static long startTime;
     public static void main(String[] args) {
         initialize();
         Checker checker = new Checker(dimen);
-        checker.addChess(new Chess(true, (char)('a' + dimen / 2 - 1), (char)('a' + dimen / 2 - 1)));
-        checker.addChess(new Chess(false, (char)('a' + dimen / 2), (char)('a' + dimen / 2 - 1)));
-        checker.addChess(new Chess(false, (char)('a' + dimen / 2 - 1), (char)('a' + dimen / 2)));
-        checker.addChess(new Chess(true, (char)('a' + dimen / 2), (char)('a' + dimen / 2)));
+        checker.initialize();
         checker.print();
-//        while(!isOver) {
-//            if(!computer.getColor()){
-//                if(!computerMov(checker)) {
-//                    if(playerMov(checker)) {
-//
-//                    }
-//                }
-//                computerMov(checker);
-//                checker.print();
-//                playerMov(checker);
-//                checker.print();
-//            }else {
-//                playerMov(checker);
-//                checker.print();
-//                computerMov(checker);
-//                checker.print();
-//            }
-//        }
-        computerMov(checker);
-        checker.print();
-        playerMov(checker);
-        checker.print();
+        while(!isOver) {
+            for(int i = 0; i < players.length; i++) {
+                int num = i % 2;
+                if(players[num].hasValidMove(checker)){
+                    playerMove(players[num], checker);
+                    checker.print();
+                }else if(players[(num + 1) % 2].hasValidMove(checker)) {
+                    System.out.print((players[num].getColor()? 'O' : 'X') + " player has no valid move.");
+                    playerMove(players[++num % 2], checker);
+                    checker.print();
+                }else {
+                    System.out.println("Both players have no valid move.");
+                    isOver = true;
+                    break;
+                }
+            }
+        }
+        endGame();
+        writeBlog();
     }
     public static void initialize() {
+        startTime = System.currentTimeMillis();
         Scanner input = new Scanner(System.in);
         System.out.print("Enter the board dimension: ");
         dimen = input.nextInt();
@@ -51,43 +50,60 @@ public class Reversi {
         boolean color = input.next().charAt(0) == 'O';
         computer = new Computer(color);
         human = new Human(!color);
+        players = new Player[2];
+        if(!color) {
+            players[0] = computer;
+            players[1] = human;
+        }else {
+            players[1] = computer;
+            players[0] = human;
+        }
     }
 
-    public static boolean playerMov(Checker checker) {
-        if(!human.hasValidMove(checker)){
-            System.out.println((human.getColor()? 'O' : 'X') + " human has no valid move.");
-            return false;
-        }
+    public static void playerMove(Player player, Checker checker) {
+        if(player instanceof Human) {
+            humanMov(checker);
+        }else
+            computerMov(checker);
+    }
+
+    public static void humanMov(Checker checker) {
         int[] move = getPlayerMove();
         if(!checker.checkHumanMove(move[0], move[1], human.getColor())) {
             System.out.println("Invalid move.");
             System.out.println("Game Over.");
-            System.out.println((computer.getColor()? 'O' : 'X') + " human wins.");
+            System.out.println((computer.getColor()? 'O' : 'X') + " player wins.");
+            human.setGiveUp(true);
+            writeBlog();
             System.exit(0);
         }
         human.move(move[0], move[1], checker);
-        human.addChess(move[0], move[1], checker);
-        return true;
+        human.changeChess(move, checker, computer);
     }
 
-    public static boolean computerMov(Checker checker) {
-        char[] move = computer.move(checker);
-        if(move == null) {
-            System.out.print((computer.getColor()? 'O' : 'X') + "human has no valid move.");
-            return true;
-        }else {
-            System.out.println("\nComputer places " + (computer.getColor()? 'O' : 'X') + " at " + move[0] + move[1]);
-            computer.addChess(move[0] - 'a', move[1] - 'a', checker);
-            return false;
-        }
+    public static void computerMov(Checker checker) {
+        int[] move = computer.move(checker);
+        System.out.println("Computer places " + (computer.getColor()? 'O' : 'X') + " at " + (char)(move[0] + 'a') + (char)(move[1] + 'a') + ".");
+        computer.changeChess(move, checker, human);
     }
 
     public static void writeBlog() {
+        long endTime = System.currentTimeMillis();
         FileGetter fileGetter = new FileGetter();
         File blogFile = fileGetter.readFileFromClassPath();
         try {
             BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(blogFile, true));
-            bufferedWriter.write("日期" + "," + "玩家");
+            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyy-MM-dd HH:mm:ss");
+            bufferedWriter.write(simpleDateFormat.format(new Date()) + ",");
+            bufferedWriter.write((endTime - startTime) / 1000 + ",");
+            bufferedWriter.write(dimen + " * " + dimen + ",");
+            bufferedWriter.write((computer.getColor()? "human" : "computer") + ",");
+            bufferedWriter.write((!computer.getColor()? "human" : "computer") + ',');
+            if(human.isGiveUp()) {
+                bufferedWriter.write("Human give up");
+            }else {
+                bufferedWriter.write(players[0].getChessNum() + " to " + players[1].getChessNum());
+            }
             bufferedWriter.newLine();
             bufferedWriter.close();
         } catch (IOException e) {
@@ -96,9 +112,15 @@ public class Reversi {
     }
 
     public static int[] getPlayerMove() {
-        System.out.print("\nEnter move for " + (human.getColor()? 'O' : 'X') + "(RowCol): ");
+        System.out.print("Enter move for " + (human.getColor()? 'O' : 'X') + "(RowCol): ");
         Scanner input = new Scanner(System.in);
         String move = input.next();
         return new int[]{move.charAt(0) - 'a', move.charAt(1) - 'a'};
+    }
+
+    public static void endGame() {
+        System.out.println("Game Over.");
+        System.out.println("X : O = " + players[0].getChessNum() + " : " + players[1].getChessNum());
+        System.out.println((players[0].getChessNum() > players[1].getChessNum()? "X" : "O") + " player wins.");
     }
 }

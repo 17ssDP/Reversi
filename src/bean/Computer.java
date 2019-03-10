@@ -6,7 +6,7 @@ public class Computer extends Player{
         super(color);
     }
 
-    public char[] move(Checker checker) {
+    public int[] move(Checker checker) {
         int maxScore = 0;
         int row = 0;
         int col = 0;
@@ -24,7 +24,7 @@ public class Computer extends Player{
         }
         if(maxScore > 0) {
             super.move(row, col, checker);
-            return new char[]{(char)(row + 'a'), (char)(col + 'a')};
+            return new int[]{row, col};
         }else {
             return null;
         }

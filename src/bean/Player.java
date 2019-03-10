@@ -11,6 +11,7 @@ public class Player {
 
     public Player(boolean color) {
         this.color = color;
+        this.chessNum = 2;
     }
 
     public boolean hasValidMove(Checker checker) {
@@ -28,13 +29,13 @@ public class Player {
     }
 
     public void move(int row, int col, Checker checker) {
-        Chess chess = new Chess(this.color, (char)(row + 'a'), (char)(col + 'a'));
-        checker.getChessboard()[row][col] = chess;
+
     }
 
-    public void addChess(int row, int col, Checker checker) {
-        int add = checker.changeColor(row, col, this.getColor());
-        this.setChessNum(this.getChessNum() + add);
+    public void changeChess(int[] move, Checker checker, Player reducer) {
+        int add = checker.changeColor(move[0], move[1], this.getColor());
+        this.setChessNum(this.getChessNum() + add + 1);
+        reducer.setChessNum(reducer.getChessNum() - add);
     }
 
     public boolean getColor() {

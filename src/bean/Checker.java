@@ -11,6 +11,7 @@ public class Checker {
     public Checker(int size) {
         this.size = size;
         this.chessboard = new Chess[size][size];
+
     }
     public void addChess(Chess chess) {
         chessboard[chess.getRow() - 'a'][chess.getCol() - 'a'] = chess;
@@ -68,9 +69,16 @@ public class Checker {
 
             }
         }
+        System.out.println();
     }
     public boolean checkHumanMove(int row, int col, boolean color) {
         return (this.getChessboard()[row][col] == null) && this.computeScore(row, col, color) > 0;
+    }
+    public void initialize() {
+        this.addChess(new Chess(true, (char)('a' + size / 2 - 1), (char)('a' + size / 2 - 1)));
+        this.addChess(new Chess(false, (char)('a' + size / 2), (char)('a' + size / 2 - 1)));
+        this.addChess(new Chess(false, (char)('a' + size / 2 - 1), (char)('a' + size / 2)));
+        this.addChess(new Chess(true, (char)('a' + size / 2), (char)('a' + size / 2)));
     }
     public int getSize() {
         return size;
