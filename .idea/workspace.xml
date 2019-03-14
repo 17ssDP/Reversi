@@ -2,10 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a6759c0c-fe69-44f1-a62b-564978faa095" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/bean/Computer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bean/Computer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/blog/Reversi.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/blog/Reversi.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Reversi/bean/Checker.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Reversi/bean/Chess.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Reversi/bean/Computer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Reversi/bean/Human.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Reversi/bean/Player.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Reversi/bean/Reversi.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Reversi/blog/Reversi.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bean/Checker.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bean/Chess.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bean/Computer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bean/Human.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bean/Player.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bean/Reversi.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/blog/Reversi.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constant/FileGetter.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/../../../SoftwareEngineering/Lab/Lab2/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,28 +34,20 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/constant/FileGetter.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Checker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
+            <state relative-caret-position="285">
+              <caret line="84" column="5" lean-forward="true" selection-start-line="84" selection-start-column="5" selection-end-line="84" selection-end-column="5" />
               <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/bean/Checker.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="52" column="24" selection-start-line="52" selection-start-column="24" selection-end-line="52" selection-end-column="24" />
-              <folding>
+                <element signature="method#Checker#0;class#Checker#0" />
                 <element signature="method#Checker#1;class#Checker#0" />
                 <element signature="method#computeScore#0;class#Checker#0" />
+                <element signature="e#541#844#1" />
+                <element signature="e#651#830#1" />
                 <element signature="method#changeColor#0;class#Checker#0" />
                 <element signature="method#getChess#0;class#Checker#0" />
                 <element signature="method#print#0;class#Checker#0" />
+                <element signature="e#2001#2402#1" />
                 <element signature="method#checkHumanMove#0;class#Checker#0" />
                 <element signature="method#initialize#0;class#Checker#0" />
               </folding>
@@ -44,80 +55,87 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/bean/Reversi.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Chess.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="371">
-              <caret line="86" column="24" selection-start-line="86" selection-start-column="24" selection-end-line="86" selection-end-column="24" />
+            <state relative-caret-position="133">
+              <caret line="7" column="17" lean-forward="true" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../SoftwareEngineering/Lab/Lab2/src/main/java/fudan/se/lab2/Lab2Application.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="95">
+              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../SoftwareEngineering/Lab/Lab2/src/main/java/fudan/se/lab2/service/AccountService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="76">
+              <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Computer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="19">
+              <caret line="1" selection-start-line="1" selection-end-line="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/FileGetter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="228">
+              <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#main#0;class#Reversi#0" />
-                <element signature="method#initialize#0;class#Reversi#0" />
-                <element signature="method#playerMove#0;class#Reversi#0" />
-                <element signature="method#humanMov#0;class#Reversi#0" />
-                <element signature="method#writeBlog#0;class#Reversi#0" />
-                <element signature="method#getPlayerMove#0;class#Reversi#0" />
-                <element signature="method#endGame#0;class#Reversi#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/bean/Human.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Human.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="10" selection-end-column="50" />
+            <state relative-caret-position="19">
+              <caret line="1" selection-start-line="1" selection-end-line="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Player.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="19">
+              <caret line="1" selection-start-line="1" selection-end-line="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Reversi.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="396">
+              <caret line="82" column="27" selection-start-line="82" selection-start-column="27" selection-end-line="82" selection-end-column="27" />
               <folding>
-                <element signature="e#82#83#0" expanded="true" />
-                <element signature="e#110#111#0" expanded="true" />
-                <element signature="e#391#392#0" expanded="true" />
-                <element signature="e#420#421#0" expanded="true" />
-                <element signature="e#465#466#0" expanded="true" />
-                <element signature="e#501#502#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/bean/Chess.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
-              <folding>
-                <element signature="method#Chess#1;class#Chess#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/bean/Computer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="8" column="39" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
-              <folding>
-                <element signature="e#89#90#0" expanded="true" />
-                <element signature="e#117#118#0" expanded="true" />
-                <element signature="method#move#0;class#Computer#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/bean/Player.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
-              <folding>
-                <element signature="method#Player#0;class#Player#0" />
-                <element signature="method#Player#1;class#Player#0" />
-                <element signature="method#hasValidMove#0;class#Player#0" />
-              </folding>
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/src/main/resources/Reversi.csv">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -140,61 +158,95 @@
         <option value="$PROJECT_DIR$/src/Checker.java" />
         <option value="$PROJECT_DIR$/src/bean/Chess.java" />
         <option value="$PROJECT_DIR$/src/constant/FileGetter.java" />
-        <option value="$PROJECT_DIR$/src/bean/Checker.java" />
         <option value="$PROJECT_DIR$/src/bean/Player.java" />
         <option value="$PROJECT_DIR$/src/bean/Human.java" />
-        <option value="$PROJECT_DIR$/src/bean/Reversi.java" />
         <option value="$PROJECT_DIR$/src/bean/Computer.java" />
+        <option value="$PROJECT_DIR$/src/bean/Reversi.java" />
+        <option value="$PROJECT_DIR$/src/bean/Checker.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Chess.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Computer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Human.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Player.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Reversi.java" />
+        <option value="$PROJECT_DIR$/src/main/java/FileGetter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Checker.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="952" />
-    <option name="width" value="977" />
-    <option name="height" value="1038" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="950" />
+    <option name="width" value="980" />
+    <option name="height" value="1040" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="Reversi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Lab2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Reversi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Lab2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Reversi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Lab2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Reversi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Lab2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Reversi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Lab2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="lab2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Reversi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Lab2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="lab2" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Reversi" type="b2602c69:ProjectViewProjectNode" />
               <item name="Reversi" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Reversi" type="b2602c69:ProjectViewProjectNode" />
               <item name="Reversi" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Reversi" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Reversi" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="bean" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Reversi" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Reversi" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="blog" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552218986782" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552537686365" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../SoftwareEngineering/Lab/Lab2/pom.xml" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.gutterIcons" />
@@ -211,7 +263,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Reversi (1)">
+  <component name="RunManager" selected="Application.Reversi (2)">
     <configuration name="Reversi (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="bean.Reversi" />
       <module name="Reversi" />
@@ -225,7 +277,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Reversi" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="Reversi (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main.java.Reversi" />
+      <module name="Reversi" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="main.java.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Reversi" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Reversi" />
       <module name="Reversi" />
       <method v="2">
@@ -245,10 +310,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Lab2Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="lab2" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="fudan.se.lab2.Lab2Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Reversi (2)" />
         <item itemvalue="Application.Reversi (1)" />
-        <item itemvalue="Application.Reversi" />
       </list>
     </recent_temporary>
   </component>
@@ -267,22 +339,28 @@
       <workItem from="1551688586196" duration="18431000" />
       <workItem from="1552194243939" duration="11117000" />
       <workItem from="1552210668312" duration="7241000" />
+      <workItem from="1552294320423" duration="5250000" />
+      <workItem from="1552530181718" duration="54000" />
+      <workItem from="1552530669178" duration="2895000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52424000" />
+    <option name="totallyTimeSpent" value="60623000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.12868632" />
+      <window_info id="Web" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18431635" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Spring" />
+      <window_info anchor="bottom" id="Java Enterprise" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.6983003" />
@@ -296,6 +374,7 @@
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.3286119" />
+      <window_info anchor="right" id="Bean Validation" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -313,6 +392,18 @@
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.csv" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/bean/Reversi.java</url>
+          <line>62</line>
+          <properties />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Reversi.java" />
     <entry file="file://$PROJECT_DIR$/src/Chess.java" />
@@ -329,10 +420,53 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/constant/FileGetter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
+        <state relative-caret-position="190">
           <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bean/Checker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="75" column="25" selection-start-line="75" selection-start-column="25" selection-end-line="75" selection-end-column="25" />
+          <folding>
+            <element signature="method#Checker#1;class#Checker#0" />
+            <element signature="method#computeScore#0;class#Checker#0" />
+            <element signature="method#changeColor#0;class#Checker#0" />
+            <element signature="method#getChess#0;class#Checker#0" />
+            <element signature="method#print#0;class#Checker#0" />
+            <element signature="method#initialize#0;class#Checker#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bean/Reversi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+          <folding>
+            <element signature="method#main#0;class#Reversi#0" />
+            <element signature="method#initialize#0;class#Reversi#0" />
+            <element signature="method#playerMove#0;class#Reversi#0" />
+            <element signature="method#humanMov#0;class#Reversi#0" />
+            <element signature="method#computerMov#0;class#Reversi#0" />
+            <element signature="method#writeBlog#0;class#Reversi#0" />
+            <element signature="method#getPlayerMove#0;class#Reversi#0" />
+            <element signature="method#endGame#0;class#Reversi#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bean/Human.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" selection-start-line="9" selection-end-line="10" selection-end-column="50" />
+          <folding>
+            <element signature="e#110#111#0" expanded="true" />
+            <element signature="e#138#139#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -343,49 +477,6 @@
           <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
           <folding>
             <element signature="method#Chess#1;class#Chess#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/bean/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
-          <folding>
-            <element signature="method#Player#0;class#Player#0" />
-            <element signature="method#Player#1;class#Player#0" />
-            <element signature="method#hasValidMove#0;class#Player#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/bean/Checker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="52" column="24" selection-start-line="52" selection-start-column="24" selection-end-line="52" selection-end-column="24" />
-          <folding>
-            <element signature="method#Checker#1;class#Checker#0" />
-            <element signature="method#computeScore#0;class#Checker#0" />
-            <element signature="method#changeColor#0;class#Checker#0" />
-            <element signature="method#getChess#0;class#Checker#0" />
-            <element signature="method#print#0;class#Checker#0" />
-            <element signature="method#checkHumanMove#0;class#Checker#0" />
-            <element signature="method#initialize#0;class#Checker#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/bean/Human.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="10" selection-end-column="50" />
-          <folding>
-            <element signature="e#82#83#0" expanded="true" />
-            <element signature="e#110#111#0" expanded="true" />
-            <element signature="e#391#392#0" expanded="true" />
-            <element signature="e#420#421#0" expanded="true" />
-            <element signature="e#465#466#0" expanded="true" />
-            <element signature="e#501#502#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -402,19 +493,140 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/bean/Reversi.java">
+    <entry file="file://$PROJECT_DIR$/src/bean/Player.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="371">
-          <caret line="86" column="24" selection-start-line="86" selection-start-column="24" selection-end-line="86" selection-end-column="24" />
+        <state relative-caret-position="266">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+          <folding>
+            <element signature="method#Player#0;class#Player#0" />
+            <element signature="method#Player#1;class#Player#0" />
+            <element signature="method#hasValidMove#0;class#Player#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../SoftwareEngineering/Lab/Lab2/pom.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../SoftwareEngineering/Lab/Lab2/src/main/java/fudan/se/lab2/repository/impl/UserRepositoryImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="33" column="22" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../SoftwareEngineering/Lab/Lab2/src/main/java/fudan/se/lab2/repository/impl/CappuccinoRepositoryImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="12" column="30" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../SoftwareEngineering/Lab/Lab2/src/main/java/fudan/se/lab2/util/FileUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../SoftwareEngineering/Lab/Lab2/src/main/java/fudan/se/lab2/constant/FileConstant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../SoftwareEngineering/Lab/Lab2/src/main/java/fudan/se/lab2/constant/InfoConstant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../SoftwareEngineering/Lab/Lab2/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../SoftwareEngineering/Lab/Lab2/src/main/java/fudan/se/lab2/Lab2Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Chess.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="17" lean-forward="true" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/Reversi.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Checker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="84" column="5" lean-forward="true" selection-start-line="84" selection-start-column="5" selection-end-line="84" selection-end-column="5" />
+          <folding>
+            <element signature="method#Checker#0;class#Checker#0" />
+            <element signature="method#Checker#1;class#Checker#0" />
+            <element signature="method#computeScore#0;class#Checker#0" />
+            <element signature="e#541#844#1" />
+            <element signature="e#651#830#1" />
+            <element signature="method#changeColor#0;class#Checker#0" />
+            <element signature="method#getChess#0;class#Checker#0" />
+            <element signature="method#print#0;class#Checker#0" />
+            <element signature="e#2001#2402#1" />
+            <element signature="method#checkHumanMove#0;class#Checker#0" />
+            <element signature="method#initialize#0;class#Checker#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../SoftwareEngineering/Lab/Lab2/src/main/java/fudan/se/lab2/service/AccountService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Computer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/FileGetter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#main#0;class#Reversi#0" />
-            <element signature="method#initialize#0;class#Reversi#0" />
-            <element signature="method#playerMove#0;class#Reversi#0" />
-            <element signature="method#humanMov#0;class#Reversi#0" />
-            <element signature="method#writeBlog#0;class#Reversi#0" />
-            <element signature="method#getPlayerMove#0;class#Reversi#0" />
-            <element signature="method#endGame#0;class#Reversi#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Human.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Reversi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="82" column="27" selection-start-line="82" selection-start-column="27" selection-end-line="82" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Reversi.iml" filepath="$PROJECT_DIR$/Reversi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../SoftwareEngineering/Lab/Lab2/lab2.iml" filepath="$PROJECT_DIR$/../../../SoftwareEngineering/Lab/Lab2/lab2.iml" />
     </modules>
   </component>
 </project>
