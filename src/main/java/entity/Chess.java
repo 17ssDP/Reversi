@@ -1,4 +1,4 @@
-package main.java;
+package main.java.entity;
 
 public class Chess {
     private boolean color; //True for White, False for black

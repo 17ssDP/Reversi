@@ -1,12 +1,12 @@
-package main.java;
+package main.java.entity;
 
-public class Computer extends Player{
+public class Computer extends Player {
 
     public Computer(boolean color) {
         super(color);
     }
 
-    public int[] move(Checker checker) {
+    public int[] getMove(Checker checker){
         int maxScore = 0;
         int row = 0;
         int col = 0;
@@ -22,12 +22,9 @@ public class Computer extends Player{
                 }
             }
         }
-        if(maxScore > 0) {
-            Chess chess = new Chess(this.getColor(), (char)(row + 'a'), (char)(col + 'a'));
-            checker.getChessboard()[row][col] = chess;
+        if(maxScore > 0)
             return new int[]{row, col};
-        }else {
-            return null;
-        }
+        else
+            return  null;
     }
 }

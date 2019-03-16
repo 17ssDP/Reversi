@@ -1,8 +1,14 @@
-日期,时间,棋盘,黑棋,白棋,比分
+日期,对局时长,棋盘大小,黑棋,白棋,比分
 2019/3/10 19:54,11,4 * 4,computer,human,2 to 11
 2019/3/10 19:55,10,4 * 4,computer,human,2 to 11
-2019-03-10 19:56:24,19,4 * 4,computer,human,2 to 11
-2019-03-12 09:53:10,13,4 * 4,computer,human,Human give up
-2019-03-12 09:55:29,6,4 * 4,computer,human,Human give up
-2019-03-14 12:16:38,9,4 * 4,computer,human,Human give up
-2019-03-14 12:16:59,8,4 * 4,computer,human,Human give up
+2019/3/10 19:56,19,4 * 4,computer,human,2 to 11
+2019/3/12 9:53,13,4 * 4,computer,human,Human give up
+2019/3/12 9:55,6,4 * 4,computer,human,Human give up
+2019/3/14 12:16,9,4 * 4,computer,human,Human give up
+2019/3/14 12:16,8,4 * 4,computer,human,Human give up
+2019/3/14 12:18,23,4 * 4,computer,human,2 to 11
+2019/3/15 18:23,87,4 * 4,computer,human,2 to 11
+2019/3/15 18:25,68,4 * 4,computer,human,Human give up
+2019/3/15 18:27,28,4 * 4,computer,human,6 to 6
+2019/3/15 18:31,9,4 * 4,computer,human,Human give up
+2019/3/16 10:05,31,4 * 4,computer,human,2 to 11
