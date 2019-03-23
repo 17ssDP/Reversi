@@ -19,16 +19,23 @@ public class Checker {
 
     //检查棋盘上无子处能否下棋
     public int computeScore(int row, int col, boolean color) {
+        if(getChess(row, col) != null)
+            return 0;
         int score = 0;
         for(int i = 1; i >= -1; i--) {
             for(int j = 1; j >= -1; j--) {
-                if(getChess(row - i, col - j) != null && !chessboard[row - i][col - j].getColor() == color) {
-                    if(getChess(row - 2 * i, col - 2 * j) != null && chessboard[row - 2 * i][col - 2 * j].getColor() == color)
-                        score++;
-                }
+                int out = 1;
+                while(checkColor(row - out * i, col - out * j, !color))
+                    out++;
+                if(checkColor(row - out * i, col - out * j, color))
+                    score += out - 1;
             }
         }
         return score;
+    }
+
+     private boolean checkColor(int row, int col, boolean color) {
+        return getChess(row, col) != null && chessboard[row][col].getColor() == color;
     }
 
     //玩家下棋之后，翻转相应的棋子
@@ -36,10 +43,14 @@ public class Checker {
         int num = 0;
         for(int i = 1; i >= -1; i--) {
             for(int j = 1; j >= -1; j--) {
-                if(getChess(row - i, col - j) != null && !chessboard[row - i][col - j].getColor() == color) {
-                    if(getChess(row - 2 * i, col - 2 * j) != null && chessboard[row - 2 * i][col - 2 * j].getColor() == color) {
-                        chessboard[row - i][col - j].setColor(color);
-                        num++;
+                int out = 1;
+                while(checkColor(row - out * i, col - out * j, !color))
+                    out++;
+                if(checkColor(row - out * i, col - out * j, color)) {
+                    num += out - 1;
+                    while(out > 0){
+                        chessboard[row - out * i][col - out * j].setColor(color);
+                        out--;
                     }
                 }
             }
@@ -84,9 +95,9 @@ public class Checker {
 
     //检查人类玩家的下棋位置是否合理
     public boolean checkHumanMove(int row, int col, boolean color) {
-        if((row < 0 || row >= size) || (col < 0 || col >= size))
+        if(!inRange(row, col))
             return false;
-        return (this.getChessboard()[row][col] == null) && this.computeScore(row, col, color) > 0;
+        return this.computeScore(row, col, color) > 0;
     }
 
     //初始化棋盘

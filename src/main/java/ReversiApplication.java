@@ -1,5 +1,6 @@
 package main.java;
 
+import main.java.constant.FileConstant;
 import main.java.constant.InfoConstant;
 import main.java.entity.Checker;
 import main.java.entity.Computer;
@@ -13,7 +14,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
 
-public class Reversi {
+public class ReversiApplication {
     private static int dimen;
     private static Human human;
     private static Computer computer;
@@ -37,7 +38,8 @@ public class Reversi {
             System.out.print(InfoConstant.INPUT_DIMEN);
             if(input.hasNextInt()) {
                 dimen = input.nextInt();
-                break;
+                if(dimen >= 4 && dimen <= 10 && dimen % 2 == 0)
+                    break;
             }
         }
         boolean color;
@@ -64,15 +66,16 @@ public class Reversi {
     //游戏过程
     public static void playGame(Checker checker) {
         boolean isOver = false;
+        int num = 0;
         while(!isOver) {
             for(int i = 0; i < players.length; i++) {
-                int num = i % 2;
                 if(players[num].hasValidMove(checker)){
                     playerMove(players[num], checker);
                     checker.print();
+                    num = ++num % 2;
                 } else if(players[(num + 1) % 2].hasValidMove(checker)) {
                     System.out.print(MessageFormat.format(InfoConstant.NO_VALID_MOVE, players[num].getChess()));
-                    playerMove(players[++num % 2], checker);
+                    playerMove(players[(num + 1) % 2], checker);
                     checker.print();
                 } else {
                     System.out.println(InfoConstant.NO_VALID_MOVES);
@@ -135,32 +138,23 @@ public class Reversi {
     //将对局信息写入文件
     public static void writeBlog() {
         long endTime = System.currentTimeMillis();
-        try {
-            FileUtil fileUtil = new FileUtil();
-            File blogFile = fileUtil.readFileFromClassPath();
-            BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(blogFile, true));
-            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyy-MM-dd HH:mm:ss");
-            bufferedWriter.write(simpleDateFormat.format(new Date()) + ",");
-            bufferedWriter.write((endTime - startTime) / 1000 + ",");
-            bufferedWriter.write(dimen + " * " + dimen + ",");
-            bufferedWriter.write((computer.getColor()? "human" : "computer") + ",");
-            bufferedWriter.write((!computer.getColor()? "human" : "computer") + ',');
-            if(human.isGiveUp()) {
-                bufferedWriter.write("Human give up");
-            }else {
-                bufferedWriter.write(players[0].getChessNum() + " to " + players[1].getChessNum());
-            }
-            bufferedWriter.newLine();
-            bufferedWriter.close();
-        } catch (IOException e) {
-            System.out.println(InfoConstant.BLOG_ERROR);
-        }
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyy-MM-dd HH:mm:ss");
+        String[] message = new String[]{simpleDateFormat.format(new Date()),
+                "" + (endTime - startTime) / 1000,
+                dimen + " * " + dimen,
+                (computer.getColor()? InfoConstant.HUMAN : InfoConstant.COMPUTER),
+                (!computer.getColor()? InfoConstant.HUMAN : InfoConstant.COMPUTER),
+                human.isGiveUp()? InfoConstant.GIVE_UP : MessageFormat.format(InfoConstant.PLAYER_TO_PLAYER, players[0], players[1])};
+        FileUtil.write(message, FileConstant.LOG_CSV);
     }
 
     //游戏结束，打印游戏结果
     public static void endGame() {
         System.out.println(InfoConstant.GAME_OVER);
         System.out.println(MessageFormat.format(InfoConstant.NUMBER_COM, players[0].getChessNum(), players[1].getChessNum()));
-        System.out.println(MessageFormat.format(InfoConstant.WINNER, (players[0].getChessNum() > players[1].getChessNum()? "X" : "O")));
+        if(players[0].getChessNum() == players[1].getChessNum())
+            System.out.println(InfoConstant.DRAW);
+        else
+            System.out.println(MessageFormat.format(InfoConstant.WINNER, (players[0].getChessNum() > players[1].getChessNum()? "X" : "O")));
     }
 }

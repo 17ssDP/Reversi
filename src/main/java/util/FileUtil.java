@@ -2,23 +2,17 @@ package main.java.util;
 
 import main.java.constant.FileConstant;
 import com.csvreader.CsvWriter;
+//import org.slf4j.Logger;
+//import org.slf4j.LoggerFactory;
+
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.Objects;
-import java.util.logging.Logger;
+
 
 public class FileUtil {
-//    private static Logger logger = LoggerFactory.getLogger(FileUtil.class);
-
-    private static final String FILE_PATH = "D:\\ProfessionalCourse\\OOP\\Lab\\Reversi\\src\\main\\resources\\Reversi.csv";
-    public File readFileFromClassPath() {
-        ClassLoader classLoader = getClass().getClassLoader();
-//        return new File(Objects.requireNonNull(classLoader.getResource(FILE_PATH)).getFile());
-        File file = new File(FILE_PATH);
-        return file;
-    }
+ //   private static Logger logger = LoggerFactory.getLogger(FileUtil.class);
     public static boolean createFile(String destFileName) {
         File file = new File(destFileName);
         if(file.exists())
