@@ -30,7 +30,7 @@ public class ReversiApplication {
         writeBlog();
     }
 
-    //初始化游戏信息，包括棋盘大小、人类玩家及电脑玩家棋子
+    //Initialize game, include checker dimen and the color of computer and human
     public static void initialize() {
         startTime = System.currentTimeMillis();
         while(true) {
@@ -63,7 +63,7 @@ public class ReversiApplication {
         }
     }
 
-    //游戏过程
+    //Play game
     public static void playGame(Checker checker) {
         boolean isOver = false;
         int num = 0;
@@ -86,7 +86,7 @@ public class ReversiApplication {
         }
     }
 
-    //玩家下子
+    //Player move
     public static void playerMove(Player player, Checker checker) {
         if(player instanceof Human) {
             humanMov(checker);
@@ -94,7 +94,7 @@ public class ReversiApplication {
             computerMov(checker);
     }
 
-    //人类玩家下子
+    //Human player move
     public static void humanMov(Checker checker) {
         int[] move = getPlayerMove();
         if(!checker.checkHumanMove(move[0], move[1], human.getColor())) {
@@ -104,7 +104,7 @@ public class ReversiApplication {
         human.changeChess(move, checker, computer);
     }
 
-    //电脑玩家自动下棋，并打印电脑下子位置
+    //Computer player move, print the checker
     public static void computerMov(Checker checker) {
         int[] move = computer.getMove(checker);
         computer.move(move[0], move[1], checker);
@@ -112,7 +112,7 @@ public class ReversiApplication {
         computer.changeChess(move, checker, human);
     }
 
-    //得到人类玩家的下子位置
+    //Get the place of human player move
     public static int[] getPlayerMove() {
         String move;
         while(true){
@@ -125,7 +125,7 @@ public class ReversiApplication {
         return new int[]{move.charAt(0) - 'a', move.charAt(1) - 'a'};
     }
 
-    //处理人类玩家的不合理下子位置
+    //Deal with the invalid move of human player
     public static void invalidMove() {
         System.out.println(InfoConstant.INVALID_MOVE);
         System.out.println(InfoConstant.GAME_OVER);
@@ -135,7 +135,7 @@ public class ReversiApplication {
         System.exit(0);
     }
 
-    //将对局信息写入文件
+    //Write the game information to blog
     public static void writeBlog() {
         long endTime = System.currentTimeMillis();
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyy-MM-dd HH:mm:ss");
@@ -144,11 +144,11 @@ public class ReversiApplication {
                 dimen + " * " + dimen,
                 (computer.getColor()? InfoConstant.HUMAN : InfoConstant.COMPUTER),
                 (!computer.getColor()? InfoConstant.HUMAN : InfoConstant.COMPUTER),
-                human.isGiveUp()? InfoConstant.GIVE_UP : MessageFormat.format(InfoConstant.PLAYER_TO_PLAYER, players[0], players[1])};
+                human.isGiveUp()? InfoConstant.GIVE_UP : MessageFormat.format(InfoConstant.PLAYER_TO_PLAYER, players[0].getChessNum(), players[1].getChessNum())};
         FileUtil.write(message, FileConstant.LOG_CSV);
     }
 
-    //游戏结束，打印游戏结果
+    //Game over, print game information
     public static void endGame() {
         System.out.println(InfoConstant.GAME_OVER);
         System.out.println(MessageFormat.format(InfoConstant.NUMBER_COM, players[0].getChessNum(), players[1].getChessNum()));

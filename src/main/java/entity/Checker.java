@@ -12,12 +12,12 @@ public class Checker {
 
     }
 
-    //玩家下棋之后，向棋盘中增加棋子
+    //Add chess to checker
     public void addChess(Chess chess) {
         chessboard[chess.getRow() - 'a'][chess.getCol() - 'a'] = chess;
     }
 
-    //检查棋盘上无子处能否下棋
+    //Check if null place can move
     public int computeScore(int row, int col, boolean color) {
         if(getChess(row, col) != null)
             return 0;
@@ -38,7 +38,7 @@ public class Checker {
         return getChess(row, col) != null && chessboard[row][col].getColor() == color;
     }
 
-    //玩家下棋之后，翻转相应的棋子
+    //Change the color of chess
     public int changeColor(int row, int col, boolean color) {
         int num = 0;
         for(int i = 1; i >= -1; i--) {
@@ -58,19 +58,19 @@ public class Checker {
         return num;
     }
 
-    //检查输入是否合理
+    //Check if the input is valid
     public boolean inRange(int row, int col) {
         return row >= 0 && row < size && col >= 0 && col < size;
     }
 
-    //得到想要位置的棋子
+    //Get the chess of an exact place
     public Chess getChess(int row, int col) {
         if(inRange(row, col))
             return chessboard[row][col];
         return null;
     }
 
-    //打印棋盘
+    //Print the checker
     public void print() {
  //       Font font = new Font("Courier New", Font.PLAIN, 14);
         System.out.print(" ");
@@ -93,14 +93,14 @@ public class Checker {
         System.out.println();
     }
 
-    //检查人类玩家的下棋位置是否合理
+    //Check if the move of human player is valid
     public boolean checkHumanMove(int row, int col, boolean color) {
         if(!inRange(row, col))
             return false;
         return this.computeScore(row, col, color) > 0;
     }
 
-    //初始化棋盘
+    //Initialize the checker
     public void initialize() {
         this.addChess(new Chess(true, (char)('a' + size / 2 - 1), (char)('a' + size / 2 - 1)));
         this.addChess(new Chess(false, (char)('a' + size / 2), (char)('a' + size / 2 - 1)));

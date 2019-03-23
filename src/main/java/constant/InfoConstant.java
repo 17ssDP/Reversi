@@ -17,4 +17,11 @@ public class InfoConstant {
     public static final String WINNER = "{0} player wins.";
     public static final String DRAW = "Draw!";
     public static final String BLOG_ERROR = "Can't write to blog!";
+
+    public static final String FILE_CANNOT_BE_DIR = "Failed to create file, {0} is not a valid name";
+    public static final String CREATING_PARENT_DIR = "Creating parent directory ...";
+    public static final String FAILED_CREAT_DIR = "Failed to create target directory";
+    public static final String FAILED_TO_CREATE_FILE = "Failed to create file: {0}";
+    public static final String SUCCESS_TO_CREATE_FILE = "Success to create file: {0}";
+    public static final String FAILED_TO_CREATE_FILE_REASON = "Failed to create file: {0}, because {1}";
 }

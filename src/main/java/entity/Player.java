@@ -15,7 +15,7 @@ public abstract class Player {
         this.chess = color? 'O' : 'X';
     }
 
-    //检查是否存在合理的下棋位置
+    //Check if there exist a valid place to move
     public boolean hasValidMove(Checker checker) {
         int score = 0;
         for(int i = 0; i < checker.getSize(); i++) {
@@ -30,13 +30,13 @@ public abstract class Player {
         return false;
     }
 
-    //下棋
+    //Chess
     public void move(int row, int col, Checker checker) {
         Chess chess = new Chess(this.getColor(), (char)(row + 'a'), (char)(col + 'a'));
         checker.getChessboard()[row][col] = chess;
     }
 
-    //下棋之后，改变棋盘上己方的棋子数量
+    //Change the number of chess
     public void changeChess(int[] move, Checker checker, Player reducer) {
         int add = checker.changeColor(move[0], move[1], this.getColor());
         this.setChessNum(this.getChessNum() + add + 1);
